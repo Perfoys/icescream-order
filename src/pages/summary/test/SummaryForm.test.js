@@ -1,5 +1,5 @@
 import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
-import { userEvent } from '@testing-library/user-event';
+import userEvent from '@testing-library/user-event';
 import SummaryForm from '../SummaryForm.jsx';
 
 test('Check that order button is disabled by default', () => {
@@ -27,5 +27,5 @@ test('popover responds to mousehover', async () => {
 
   userEvent.unhover(termsAndConditions);
 
-  await waitForElementToBeRemoved(() => queryByText(/no ice cream will actually be delivered/i));
+  await waitForElementToBeRemoved(() => screen.queryByText(/no ice cream will actually be delivered/i));
 });

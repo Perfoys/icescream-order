@@ -14,7 +14,7 @@ const ToppingOption = ({ name, imagePath, updateItemCount }) => {
         src={`http://localhost:3030/${imagePath}`}
         alt={`${name} topping`}
       />
-      <Form.Group controllId={`${name}-topping-checkbox`}>
+      <Form.Group controlId={`${name}-topping-checkbox`}>
         <Form.Check type="checkbox" onChange={handleChange} label={name} />
       </Form.Group>
     </Col>

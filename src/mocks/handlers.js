@@ -17,5 +17,8 @@ export const handlers = [
         { name: 'Hot fudge', imagePath: '/images/hot-fudge' }
       ])
     );
+  }),
+  rest.post('http://localhost:3030/order', (request, response, context) => {
+    return response(context.json({ orderNumber: 123455678 }));
   })
 ];
